@@ -19,7 +19,7 @@ jetson-inference/python/training/classification/data
 
 ### 3: Download the dataset
 
-https://www.kaggle.com/datasets/wgcleveland/rock-paper-scissors/settings
+https://kaggle.com/datasets/46b833aa053376b64aee34bdde0e41135123bcd0a5943aa1b171bec4a72cab8e
 
 ### 4: Move the dataset into the current directory (jetson-inference/python/training/classification/data)
 
