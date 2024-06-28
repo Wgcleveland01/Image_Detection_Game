@@ -1,16 +1,38 @@
-# Project Name
+# Rock-Paper-Scissors Image Classification Model
 
- Add short description of project here > 
-
-![add image descrition here](direct image link here)
-
-## The Algorithm
-
-Add an explanation of the algorithm and how it works. Make sure to include details about how the code works, what it depends on, and any other relevant info. Add images or other descriptions for your project here. 
+An image classification model made to identify hands in the shape of rocks, papers, or scissors.
 
 ## Running this project
 
-1. Add steps for running this project.
-2. Make sure to include any required libraries that need to be installed for your project to run.
+Ensure docker and jetson-inference are installed
+	-sudo docker ps
+	-cd jetson-inference
 
-[View a video explanation here](video link)
+Change directories
+	-jetson-inference/python/training/classification/data
+
+Download the dataset
+	-https://www.kaggle.com/datasets/wgcleveland/rock-paper-scissors/settings
+
+Move the dataset into the current directory (jetson-inference/python/training/classification/data)
+
+Change directories
+	-nvidia/jetson-inference/
+
+Ensure that memory is overcommited
+	-echo 1 | sudo tee /proc/sys/vm/overcommit_memory
+
+Set variables for the following command
+	-NET=models/game_model/
+	-DATASET=data/game_dataset/
+
+Run Images
+	-imagenet.py --model=$NET/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=$DATASET/labels.txt data/game_dataset//test/paper/WIN_20240627_14_56_20_Pro.jpg output_file.jpg
+
+ ## Sources
+
+ https://www.kaggle.com/datasets/glushko/rock-paper-scissors-dataset
+ https://github.com/alessandro-giusti/rock-paper-scissors
+
+
+
