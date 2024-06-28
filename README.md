@@ -2,6 +2,10 @@
 
 An image classification model made to identify hands in the shape of rocks, papers, or scissors.
 
+A video showing how to run the model can be found below.
+
+https://drive.google.com/file/d/1j3CXNB5NrmzdRlFliaCZ7FZ9et3lwBQC/view?usp=sharing
+
 ## Running the model
 
 ### 1: Ensure docker and jetson-inference are installed
